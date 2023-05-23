@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:termproject/app/setting/settting_page.dart';
-
-import 'app/getx/simple/simple_count_page.dart';
-import 'app/home/home_page.dart';
+import 'package:shurubkorea/page1.dart';
+import 'package:shurubkorea/page2.dart';
+import 'package:shurubkorea/page3.dart';
+import 'package:shurubkorea/settting_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -28,9 +28,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   final List<Widget> _screens = <Widget>[
     //Text('홈화면'),
-    HomePage(),
-    SimpleCountPage(), //CountPage(),
-    SettingPage(),
+    Page1(),
+    Page2(),
+    SettingPage()
+    //Page3()
   ];
   @override
   void initState() {
