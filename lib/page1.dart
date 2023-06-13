@@ -12,7 +12,10 @@ class _Page1State extends State<Page1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: header()),
+      body: SafeArea(
+          child: Stack(
+        children: [body(), header()],
+      )),
     );
   }
 
@@ -204,13 +207,22 @@ class _Page1State extends State<Page1> {
     );
   }
 
-  Widget body() {}
+  Widget body() {
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      child: bg(),
+    );
+  }
 
   Widget logo() {
     return Image.asset('assets/images/Product/Logo.png', width: 100, height: 35);
   }
 
   Widget bg() {
-    return Image.asset('assets/images/Product/BG.png');
+    return Image.asset(
+      'assets/images/BG.png',
+      fit: BoxFit.cover,
+    );
   }
 }
