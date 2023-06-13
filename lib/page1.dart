@@ -17,16 +17,17 @@ class _Page1State extends State<Page1> {
   }
 
   Widget header() {
-    return Container(
-      width: double.maxFinite,
-      height: 75,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.vertical(bottom: Radius.circular(25)),
-        color: Colors.purple,
-      ),
-      child: Column(
-        children: [
-          Row(
+    return Stack(
+      children: [
+        nav(),
+        Container(
+          width: double.maxFinite,
+          height: 75,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(25)),
+            color: Colors.purple,
+          ),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               logo(),
@@ -56,15 +57,154 @@ class _Page1State extends State<Page1> {
                   )),
             ],
           ),
-          // SizedBox(
-          //   width: double.infinity,
-          //   height: double.infinity,
-          //   child: Container(child: bg()),
-          // )
-        ],
-      ),
+        ),
+      ],
     );
   }
+
+  Widget nav() {
+    return Column(
+      children: [
+        SizedBox(
+          height: 55,
+        ),
+        Container(
+          width: double.maxFinite,
+          height: 250,
+          padding: EdgeInsets.only(top: 25),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(25)),
+            color: Color.fromARGB(179, 240, 200, 255),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              SizedBox(width: 100),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SizedBox.shrink(),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '멤버',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '비젼',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '연혁',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '정보',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '  Gather\nTogether',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Repaqto',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '뉴스',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '축제',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '커뮤니티',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '인스타그램',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '블로그',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '이메일',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        '유튜브',
+                        style: TextStyle(color: Colors.purple, fontSize: 11, fontFamily: 'Jalnan'),
+                      )),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget body() {}
 
   Widget logo() {
     return Image.asset('assets/images/Product/Logo.png', width: 100, height: 35);
