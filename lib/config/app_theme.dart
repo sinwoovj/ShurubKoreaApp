@@ -22,7 +22,7 @@ class AppTheme {
       ),
       appBarTheme: AppBarTheme(
         centerTitle: true,
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.purple,
         iconTheme: IconThemeData(
           color: AppColors.black,
         ),

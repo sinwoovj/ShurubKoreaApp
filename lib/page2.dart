@@ -12,22 +12,33 @@ class Page2 extends StatefulWidget {
 class _Page2State extends State<Page2> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        Center(
-            child: Text('슈룹코리아',
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineLarge
-                    ?.copyWith(color: AppColors.blue, fontFamily: 'Pretendard'))),
-        Center(
-          child: Text(
-            '어서오세요',
-            style: Theme.of(context).textTheme.headlineLarge,
-          ),
-        )
-      ],
+    return Scaffold(
+      body: SafeArea(child: product()),
     );
   }
+
+  Widget product() {
+    return SizedBox(
+      width: double.infinity,
+      height: double.infinity,
+      child: Container(child: Image.asset('assets/images/Mobile/Mobile-Product.png')),
+    );
+  }
+  // return Column(
+  //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+  //   children: [
+  //     Center(
+  //         child: Text('슈룹코리아',
+  //             style: Theme.of(context)
+  //                 .textTheme
+  //                 .headlineLarge
+  //                 ?.copyWith(color: AppColors.blue, fontFamily: 'Pretendard'))),
+  //     Center(
+  //       child: Text(
+  //         '어서오세요',
+  //         style: Theme.of(context).textTheme.headlineLarge,
+  //       ),
+  //     )
+  //   ],
+  // );
 }
